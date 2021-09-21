@@ -1,6 +1,6 @@
-import { Atendente } from "../models/atendente";
+import { AtendenteModel } from "../models/atendente";
 import { EntrarModel } from "../models/entrar";
 
 export interface EntrarUseCase {
-    entrar: (entrarModel: EntrarModel) => Promise<Atendente>
+    entrar: (entrarModel: EntrarModel) => Promise<AtendenteModel | Error> 
 }

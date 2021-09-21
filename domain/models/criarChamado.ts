@@ -1,4 +1,4 @@
-import { Atendente } from "./atendente";
+import { AtendenteModel } from "./atendente";
 import { CanalModel } from "./canalModel";
 import { SituacaoModel } from "./situacao";
 
@@ -7,5 +7,5 @@ export interface CriarChamadoModel {
     descricao: string
     canal: CanalModel
     situacao: SituacaoModel
-    atendente: Atendente
+    atendente: AtendenteModel
 }
