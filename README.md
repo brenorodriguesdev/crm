@@ -2,6 +2,7 @@
 - Entrar
 - Criar Chamado
 - Atender Chamado
+- RetornarChamadosPorArea
 - RetornarChamadosPorAtendente
 - Alterar Chamado
 - RetornarDashboard
