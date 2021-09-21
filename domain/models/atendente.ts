@@ -1,7 +1,7 @@
-import { Area } from "./area";
+import { AreaModel } from "./area";
 
 export interface Atendente {
     id: number
     nome: string
-    areas: Area[]
+    areas: AreaModel[]
 }
