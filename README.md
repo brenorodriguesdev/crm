@@ -2,7 +2,7 @@
 - Entrar
 - Criar Chamado
 - Atender Chamado
-- Retornar Chamados pendente para uma certa área de Atendentes
+- Retornar Chamados pendentes para uma certa Àrea de Atendentes
 - Retornar Chamados em Atendimento de um certo Atendente
 - Alterar Chamado
 - RetornarDashboard
