@@ -1,4 +1,4 @@
 export interface CanalModel {
-    id: string
+    id: number
     nome: string
 }
