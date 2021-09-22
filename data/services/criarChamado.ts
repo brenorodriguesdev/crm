@@ -13,11 +13,11 @@ export class CriarChamadoService implements CriarChamadoUseCase {
     async criar(criarChamadoModel: CriarChamadoModel): Promise<void | Error> {
         const canal = await this.canalRepository.findById(criarChamadoModel.idCanal)
         if (!canal) {
-            throw new Error('Esse canal não existe!')
+            return new Error('Esse canal não existe!')
         }
         const situacao = await this.situacaoRepository.findById(criarChamadoModel.idSituacao)
         if (!situacao) {
-            throw new Error('Essa situação não existe!')
+            return new Error('Essa situação não existe!')
         }
         let atendente = null
         if (criarChamadoModel.idAtendente) {
