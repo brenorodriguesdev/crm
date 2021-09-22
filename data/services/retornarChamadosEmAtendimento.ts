@@ -4,6 +4,7 @@ import { chamadoAdapter } from "../adapters/chamadoAdapter";
 import { AtendenteRepository } from "../contracts/atendenteRepository";
 import { ChamadoRepository } from "../contracts/chamadoRepository";
 import { SituacaoRepository } from "../contracts/situacaoRepository";
+import { situacoes } from "../entities/situacao";
 
 export class RetornarChamadosEmAtendimentoService implements RetornarChamadosEmAtendimentoUseCase {
     constructor(private readonly situacaoRepository: SituacaoRepository,
@@ -14,7 +15,7 @@ export class RetornarChamadosEmAtendimentoService implements RetornarChamadosEmA
         if (!atendente) {
             return new Error('Esse atendente não existe!')
         }
-        const situacao = await this.situacaoRepository.findById(1)
+        const situacao = await this.situacaoRepository.findById(situacoes.ATENDIMENTO)
         if (!situacao) {
             return new Error('Essa situação não existe!')
         }
