@@ -1,7 +1,5 @@
 import { AtendenteRepository } from "../../../data/contracts/atendenteRepository";
-import { CanalRepository } from "../../../data/contracts/canalRepository";
 import { AtendenteEntity } from "../../../data/entities/atendente";
-import { CanalEntity } from "../../../data/entities/canal";
 import { MongoHelper } from "./mongoHelper";
 
 export class AtendenteRepositoryMongo implements AtendenteRepository {
