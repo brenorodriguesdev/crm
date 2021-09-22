@@ -9,4 +9,8 @@ export interface ChamadoRepository {
     update: (chamadoEntity: ChamadoEntity) => Promise<void>
     filterByAtendenteAndSituacao: (atendente: AtendenteEntity, situacao: SituacaoEntity) => Promise<ChamadoEntity[]>
     filterByCanalAndSituacao: (canal: CanalEntity, situacao: SituacaoEntity) => Promise<ChamadoEntity[]>
+    getCount: () => Promise<number>
+    getCountBySituacao: (situacao: SituacaoEntity) => Promise<number>
+    getCountByCanal: (canal: CanalEntity) => Promise<number>
+    getCountByCanalAndSituacao: (canal: CanalEntity, situacao: SituacaoEntity) => Promise<number>
 }

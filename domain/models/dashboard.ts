@@ -1,3 +1,4 @@
+import { CanalModel } from "./canalModel";
 import { SituacaoModel } from "./situacao";
 
 export interface DetalheSituacao {
@@ -6,6 +7,7 @@ export interface DetalheSituacao {
 }
 
 export interface DetalheCanal {
+    canal: CanalModel
     total: number
     detalhesSituacoes: DetalheSituacao[]
 }
@@ -13,5 +15,5 @@ export interface DetalheCanal {
 export interface DashboardModel {
     total: number
     detalhesSituacoes: DetalheSituacao[]
-    detalheCanais: DetalheCanal[]
+    detalhesCanais: DetalheCanal[]
 }
