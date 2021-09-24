@@ -6,7 +6,6 @@ import { SituacaoRepositoryMongo } from "../../../infra/repositories/mongo/situa
 import { Controller } from "../../../presentation/contracts/controller"
 import { AlterarChamadoController } from "../../../presentation/controllers/alterarChamado"
 import { makeAlterarChamadoValidation } from "../validations/alterarChamado"
-import { makeCriarChamadoValidation } from "../validations/criarChamado"
 
 export const makeAlterarChamadoControler = (): Controller => {
     const canalRepositoryMongo = new CanalRepositoryMongo()
