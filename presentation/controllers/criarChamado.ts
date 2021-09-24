@@ -1,9 +1,8 @@
-import { AtenderChamadoUseCase } from "../../domain/useCases/atenderChamado";
 import { CriarChamadoUseCase } from "../../domain/useCases/criarChamado";
 import { Validator } from "../../validation/contracts/validator";
 import { Controller } from "../contracts/controller";
 import { HttpRequest, HttpResponse } from "../contracts/http";
-import { badRequest, serverError, ok, created } from "../contracts/httpHelper";
+import { badRequest, serverError, created } from "../contracts/httpHelper";
 
 export class CriarChamadoController implements Controller {
     constructor(private readonly validator: Validator, private readonly criarChamadoUseCase: CriarChamadoUseCase) { }
