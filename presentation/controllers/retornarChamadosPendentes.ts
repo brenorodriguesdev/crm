@@ -4,7 +4,7 @@ import { Controller } from "../contracts/controller";
 import { HttpRequest, HttpResponse } from "../contracts/http";
 import { serverError, ok, badRequest } from "../contracts/httpHelper";
 
-export class RetornarChamadosPendenteController implements Controller {
+export class RetornarChamadosPendentesController implements Controller {
     constructor(private readonly validator: Validator, private readonly retornarChamadosPendentesService: RetornarChamadosPendentesService) { }
     async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
         try {
