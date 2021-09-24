@@ -13,11 +13,11 @@ export class EntrarController implements Controller {
                 return badRequest(error)
             }
             const { usuario, senha } = httpRequest.body
-            const token = await this.entrarUseCase.entrar({
+            const accessToken = await this.entrarUseCase.entrar({
                 usuario,
                 senha
             })
-            return ok(token)
+            return ok(accessToken)
         } catch (error) {
             return serverError()
         }
