@@ -2,8 +2,8 @@
 - Entrar
 - Criar Chamado
 - Atender Chamado
-- Retornar Chamados pendentes para uma certa Àrea de Atendentes
-- Retornar Chamados em Atendimento de um certo Atendente
+- Retornar Chamados pendentes por Canal
+- Retornar Chamados em Atendimento
 - Alterar Chamado
 - RetornarDashboard
 # Casos de Uso Administrador
