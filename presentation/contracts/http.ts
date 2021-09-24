@@ -1,8 +1,10 @@
-export interface HttpRequest<T> {
-    body: T
+export interface HttpRequest {
+    query: any
+    params: any
+    body: any
 }
 
-export interface HttpResponse<T> {
+export interface HttpResponse {
     statusCode: number
-    body: T
+    body: any
 }
