@@ -3,7 +3,7 @@ import { AtendenteRepositoryMongo } from "../../../infra/repositories/mongo/aten
 import { Middleware } from "../../../presentation/contracts/middleware"
 import { ChecarPermissaoMiddleware } from "../../../presentation/middlewares/checarPermissao"
 
-export const makeAutenticarMiddleware = (): Middleware => {
+export const makeChecarPermissaoMiddleware = (): Middleware => {
     const atendenteRepositoryMongo = new AtendenteRepositoryMongo()
     const checarPermissaoService = new ChecarPermissaoService(atendenteRepositoryMongo)
     const checarPermissaoMiddleware = new ChecarPermissaoMiddleware(checarPermissaoService)
