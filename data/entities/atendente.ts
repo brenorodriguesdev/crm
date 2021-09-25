@@ -6,4 +6,5 @@ export class AtendenteEntity {
     senha: string
     nome: string
     areas: AreaEntity[]
+    administrador?: boolean
 }
