@@ -3,6 +3,11 @@ import { CanalEntity } from "../../../data/entities/canal";
 import { MongoHelper } from "./mongoHelper";
 
 export class CanalRepositoryMongo implements CanalRepository {
+    async save(canalEntity: CanalEntity): Promise<void> {
+        const canalCollection = await MongoHelper.getCollection('canais')
+        await canalCollection.insertOne(canalEntity)
+    }
+
     async findById(id: number): Promise<CanalEntity> {
         const canalCollection = await MongoHelper.getCollection('canais')
         const canal = await canalCollection.findOne({
