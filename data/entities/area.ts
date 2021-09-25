@@ -1,4 +1,4 @@
 export class AreaEntity {
-    id: number
+    id?: number
     nome: string
 }

@@ -1,7 +1,7 @@
 import { AreaEntity } from "./area"
 
 export class AtendenteEntity {
-    id: number
+    id?: number
     usuario: string
     senha: string
     nome: string

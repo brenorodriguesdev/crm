@@ -1,4 +1,4 @@
 export class CanalEntity {
-    id: number
+    id?: number
     nome: string
 }

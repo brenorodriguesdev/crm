@@ -1,9 +1,9 @@
 export class SituacaoEntity {
-    id: number
+    id?: number
     nome: string
 }
 
-export const situacoes = {
-    PENDENTE: 1,
-    ATENDIMENTO: 2,
+export enum situacoes {
+    PENDENTE = 1,
+    ATENDIMENTO = 2,
 }
