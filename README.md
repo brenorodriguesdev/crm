@@ -2,7 +2,7 @@
 - Entrar
 - Criar Chamado
 - Atender Chamado
-- Retornar Chamados pendentes por Canal
+- Retornar Chamados pendentes
 - Retornar Chamados em Atendimento
 - Alterar Chamado
 - RetornarDashboard
