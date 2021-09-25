@@ -1,3 +1,3 @@
 export interface ChecarPermissaoUseCase {
-    checar: (idAtendente: number) => Promise<boolean | Error>
+    checar: (idAtendente: number) => Promise<Error>
 }
