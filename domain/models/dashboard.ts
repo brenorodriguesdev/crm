@@ -1,4 +1,4 @@
-import { CanalModel } from "./canalModel";
+import { CanalModel } from "./canal";
 import { SituacaoModel } from "./situacao";
 
 export interface DetalheSituacao {

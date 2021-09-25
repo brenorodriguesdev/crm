@@ -1,5 +1,5 @@
 import { AtendenteModel } from "./atendente";
-import { CanalModel } from "./canalModel";
+import { CanalModel } from "./canal";
 import { SituacaoModel } from "./situacao";
 
 export interface ChamadoModel {
