@@ -1,4 +1,3 @@
-import { AutenticarUseCase } from "../../domain/useCases/autenticar";
 import { ChecarPermissaoUseCase } from "../../domain/useCases/checarPermissao";
 import { HttpRequest, HttpResponse } from "../contracts/http";
 import { serverError, unathorized, ok } from "../contracts/httpHelper";
