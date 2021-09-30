@@ -1,5 +1,6 @@
 export interface CriarAtendenteModel {
-    id: number
+    usuario: string
+    senha: string
     nome: string
     areas: number[]
 }
