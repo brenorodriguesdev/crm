@@ -1,5 +1,5 @@
-import { AtendenteModel } from "../models/atendente";
+import { CriarAtendenteModel } from "../models/criarAtendente";
 
 export interface CriarAtendenteUseCase {
-    criar: (atendente: AtendenteModel) => Promise<void>
+    criar: (criarAtendenteModel: CriarAtendenteModel) => Promise<void>
 }
