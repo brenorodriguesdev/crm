@@ -7,4 +7,12 @@ export class AreaRepositoryMongo implements AreaRepository {
         const areaCollection = await MongoHelper.getCollection('areas')
         await areaCollection.insertOne(area)
     }
+
+    async findById(id: number): Promise<AreaEntity> {
+        const areaCollection = await MongoHelper.getCollection('areas')
+        const area = await areaCollection.findOne({
+            _id: id
+        })
+        return area && MongoHelper.map(area)
+    }
 }
