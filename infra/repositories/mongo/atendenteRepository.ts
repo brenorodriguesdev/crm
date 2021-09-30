@@ -3,6 +3,12 @@ import { AtendenteEntity } from "../../../data/entities/atendente";
 import { MongoHelper } from "./mongoHelper";
 
 export class AtendenteRepositoryMongo implements AtendenteRepository {
+
+    async save(atendenteEntity: AtendenteEntity): Promise<void> {
+        const atendenteCollection = await MongoHelper.getCollection('atendentes')
+        await atendenteCollection.insertOne(atendenteEntity)
+    }
+
     async findByUsuario(usuario: string): Promise<AtendenteEntity> {
         const atendenteCollection = await MongoHelper.getCollection('atendentes')
         const atendente = await atendenteCollection.findOne({
