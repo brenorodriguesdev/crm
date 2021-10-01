@@ -6,7 +6,7 @@ import { makeDeletarCanalValidation } from "../validations/deletarCanal"
 
 export const makeDeletarCanalControler = (): Controller => {
     const canalRepositoryMongo = new CanalRepositoryMongo()
-    const criarDeletarService = new DeletarCanalService(canalRepositoryMongo)
-    const criarDeletarController = new DeletarCanalController(makeDeletarCanalValidation(), criarDeletarService)
-    return criarDeletarController
+    const deletarCanalService = new DeletarCanalService(canalRepositoryMongo)
+    const deletarCanalController = new DeletarCanalController(makeDeletarCanalValidation(), deletarCanalService)
+    return deletarCanalController
   }
