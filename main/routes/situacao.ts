@@ -4,6 +4,7 @@ import { adaptMiddleware } from "../adapters/expressMiddlewareAdapter";
 import { makeAlterarSituacaoControler } from "../factories/controllers/alterarSituacao";
 import { makeCriarSituacaoControler } from "../factories/controllers/criarSituacao";
 import { makeDeletarSituacaoControler } from "../factories/controllers/deletarSituacao";
+import { makeRetornarSituacoesControler } from "../factories/controllers/retornarSituacoes";
 import { makeAutenticarMiddleware } from "../factories/middlewares/autenticar";
 import { makeChecarPermissaoMiddleware } from "../factories/middlewares/checarPermissao";
 
@@ -11,5 +12,6 @@ import { makeChecarPermissaoMiddleware } from "../factories/middlewares/checarPe
 export default (router: Router): void => {
     router.post('/criarSituacao', adaptMiddleware(makeAutenticarMiddleware()), adaptMiddleware(makeChecarPermissaoMiddleware()), adaptRouter(makeCriarSituacaoControler()))
     router.put('/alterarSituacao', adaptMiddleware(makeAutenticarMiddleware()), adaptMiddleware(makeChecarPermissaoMiddleware()), adaptRouter(makeAlterarSituacaoControler()))
+    router.get('/retornarSituacoes', adaptMiddleware(makeAutenticarMiddleware()), adaptMiddleware(makeChecarPermissaoMiddleware()), adaptRouter(makeRetornarSituacoesControler()))
     router.delete('/deletarSituacao', adaptMiddleware(makeAutenticarMiddleware()), adaptMiddleware(makeChecarPermissaoMiddleware()), adaptRouter(makeDeletarSituacaoControler()))
 }
