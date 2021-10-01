@@ -9,6 +9,11 @@ export class SituacaoRepositoryMongo implements SituacaoRepository {
         await situacaoCollection.insertOne(situacao)
     }
 
+    async update(situacao: SituacaoEntity): Promise<void> {
+        const situacaoCollection = await MongoHelper.getCollection('situacoes')
+        await situacaoCollection.updateOne({ _id: situacao.id }, { $set: situacao })
+    }
+
     async findById(id: number): Promise<SituacaoEntity> {
         const situacaoCollection = await MongoHelper.getCollection('situacoes')
         const situacao = await situacaoCollection.findOne({
