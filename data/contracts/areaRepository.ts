@@ -5,4 +5,5 @@ export interface AreaRepository {
     update: (area: AreaEntity) => Promise<void>
     findById: (id: number) => Promise<AreaEntity>
     deleteById: (id: number) => Promise<void>
+    getAll: () => Promise<AreaEntity[]>
 }
