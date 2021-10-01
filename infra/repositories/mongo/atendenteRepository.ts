@@ -24,4 +24,9 @@ export class AtendenteRepositoryMongo implements AtendenteRepository {
         })
         return atendente && MongoHelper.map(atendente)
     }
+
+    async deleteById(id: number): Promise<void> {
+        const atendenteCollection = await MongoHelper.getCollection('atendentes')
+        await atendenteCollection.deleteOne({_id: id})
+    }
 }
