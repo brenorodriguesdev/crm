@@ -9,5 +9,5 @@ import { makeChecarPermissaoMiddleware } from "../factories/middlewares/checarPe
 
 export default (router: Router): void => {
     router.post('/criarCanal', adaptMiddleware(makeAutenticarMiddleware()), adaptMiddleware(makeChecarPermissaoMiddleware()), adaptRouter(makeCriarCanalControler()))
-    router.post('/deletarCanal', adaptMiddleware(makeAutenticarMiddleware()), adaptMiddleware(makeChecarPermissaoMiddleware()), adaptRouter(makeDeletarCanalControler()))
+    router.delete('/deletarCanal', adaptMiddleware(makeAutenticarMiddleware()), adaptMiddleware(makeChecarPermissaoMiddleware()), adaptRouter(makeDeletarCanalControler()))
 }
