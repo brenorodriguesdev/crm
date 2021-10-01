@@ -25,4 +25,10 @@ export class AreaRepositoryMongo implements AreaRepository {
         })
         return area && MongoHelper.map(area)
     }
+
+    async getAll(): Promise<AreaEntity[]> {
+        const areaCollection = await MongoHelper.getCollection('areas')
+        const areas = await areaCollection.find({}).toArray()
+        return areas.map(area => MongoHelper.map(area))
+    }
 }
