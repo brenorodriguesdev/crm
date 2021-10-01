@@ -9,6 +9,11 @@ export class AtendenteRepositoryMongo implements AtendenteRepository {
         await atendenteCollection.insertOne(atendenteEntity)
     }
 
+    async update(atendenteEntity: AtendenteEntity): Promise<void> {
+        const atendenteCollection = await MongoHelper.getCollection('atendentes')
+        await atendenteCollection.updateOne({ _id: atendenteEntity.id }, { $set: atendenteEntity })
+    }
+
     async findByUsuario(usuario: string): Promise<AtendenteEntity> {
         const atendenteCollection = await MongoHelper.getCollection('atendentes')
         const atendente = await atendenteCollection.findOne({
