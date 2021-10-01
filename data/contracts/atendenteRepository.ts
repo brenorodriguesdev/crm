@@ -6,4 +6,5 @@ export interface AtendenteRepository {
     findByUsuario: (usuario: string) => Promise<AtendenteEntity>
     findById: (id: number) => Promise<AtendenteEntity>
     deleteById: (id: number) => Promise<void>
+    getAll: () => Promise<AtendenteEntity[]>
 }
