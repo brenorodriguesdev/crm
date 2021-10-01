@@ -13,6 +13,11 @@ export class AreaRepositoryMongo implements AreaRepository {
         await areaCollection.deleteOne({_id: id})
     }
 
+    async update(areaEntity: AreaEntity): Promise<void> {
+        const areaCollection = await MongoHelper.getCollection('areas')
+        await areaCollection.updateOne({ _id: areaEntity.id }, { $set: areaEntity })
+    }
+
     async findById(id: number): Promise<AreaEntity> {
         const areaCollection = await MongoHelper.getCollection('areas')
         const area = await areaCollection.findOne({
