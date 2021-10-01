@@ -11,6 +11,10 @@
 - Criar Àrea
 - Criar Situação
 - Criar Atendente
+- Retornar Canais
+- Retornar Àreas
+- Retornar Situações
+- Retornar Atendentes
 - Alterar Canal
 - Alterar Área
 - Alterar Situação
