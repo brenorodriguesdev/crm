@@ -16,6 +16,11 @@ export class CanalRepositoryMongo implements CanalRepository {
         return canal && MongoHelper.map(canal)
     }
 
+    async deleteById(id: number): Promise<void> {
+        const canalCollection = await MongoHelper.getCollection('canais')
+        await canalCollection.deleteOne({_id: id})
+    }
+
     async getAll(): Promise<CanalEntity[]> {
         const canalCollection = await MongoHelper.getCollection('canais')
         const canais = await canalCollection.find({}).toArray()
