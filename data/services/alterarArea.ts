@@ -1,8 +1,8 @@
 import { AreaModel } from "../../domain/models/area";
-import { AlterarCanalUseCase } from "../../domain/useCases/alterarCanal";
+import { AlterarAreaUseCase } from "../../domain/useCases/alterarArea";
 import { AreaRepository } from "../contracts/areaRepository";
 
-export class AlterarCanalService implements AlterarCanalUseCase {
+export class AlterarAreaService implements AlterarAreaUseCase {
     constructor(private readonly areaRepository: AreaRepository) { }
     async alterar(area: AreaModel): Promise<void | Error> {
         const areaEntity = await this.areaRepository.findById(area.id)
