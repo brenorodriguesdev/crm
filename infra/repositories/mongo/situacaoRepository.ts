@@ -17,6 +17,11 @@ export class SituacaoRepositoryMongo implements SituacaoRepository {
         return situacao && MongoHelper.map(situacao)
     }
 
+    async deleteById(id: number): Promise<void> {
+        const situacaoCollection = await MongoHelper.getCollection('situacoes')
+        await situacaoCollection.deleteOne({_id: id})
+    }
+
     async getAll(): Promise<SituacaoEntity[]> {
         const situacaoCollection = await MongoHelper.getCollection('situacoes')
         const situacoes = await situacaoCollection.find({}).toArray()
