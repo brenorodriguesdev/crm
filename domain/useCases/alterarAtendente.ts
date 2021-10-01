@@ -1,5 +1,5 @@
-import { AtendenteModel } from "../models/atendente";
+import { AlterarAtendenteModel } from "../models/alterarAtendente";
 
 export interface AlterarAtendenteUseCase {
-    alterar: (atendente: AtendenteModel) => Promise<void | Error>
+    alterar: (alterarAtendenteModel: AlterarAtendenteModel) => Promise<void | Error>
 }
