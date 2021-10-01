@@ -1,5 +1,4 @@
 import { RetornarCanaisUseCase } from "../../domain/useCases/retornarCanais";
-import { Validator } from "../../validation/contracts/validator";
 import { Controller } from "../contracts/controller";
 import { HttpRequest, HttpResponse } from "../contracts/http";
 import { serverError, ok } from "../contracts/httpHelper";
