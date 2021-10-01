@@ -12,7 +12,7 @@ import { makeAutenticarMiddleware } from "../factories/middlewares/autenticar";
 export default (router: Router): void => {
     router.post('/criarChamado', adaptMiddleware(makeAutenticarMiddleware()), adaptRouter(makeCriarChamadoControler()))
     router.post('/atenderChamado', adaptMiddleware(makeAutenticarMiddleware()), adaptRouter(makeAtenderChamadoControler()))
-    router.post('/alterarChamado', adaptMiddleware(makeAutenticarMiddleware()), adaptRouter(makeAlterarChamadoControler()))
+    router.put('/alterarChamado', adaptMiddleware(makeAutenticarMiddleware()), adaptRouter(makeAlterarChamadoControler()))
     router.get('/retornarChamadosEmAtendimento', adaptMiddleware(makeAutenticarMiddleware()), adaptRouter(makeRetornarChamadosEmAtendimentoControler()))
     router.get('/retornarChamadosPendentes', adaptMiddleware(makeAutenticarMiddleware()), adaptRouter(makeRetornarChamadosPendentesControler()))
 }
