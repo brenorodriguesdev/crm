@@ -1,4 +1,3 @@
-import { RetornarCanaisUseCase } from "../../domain/useCases/retornarCanais";
 import { RetornarSituacoesUseCase } from "../../domain/useCases/retornarSituacoes";
 import { Controller } from "../contracts/controller";
 import { HttpRequest, HttpResponse } from "../contracts/http";
