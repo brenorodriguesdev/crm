@@ -34,4 +34,10 @@ export class AtendenteRepositoryMongo implements AtendenteRepository {
         const atendenteCollection = await MongoHelper.getCollection('atendentes')
         await atendenteCollection.deleteOne({_id: id})
     }
+
+    async getAll(): Promise<AtendenteEntity[]> {
+        const atendenteCollection = await MongoHelper.getCollection('atendentes')
+        const atendentes = await atendenteCollection.find({}).toArray()
+        return atendentes.map(atendente => MongoHelper.map(atendente))
+    }
 }
