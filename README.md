@@ -1,6 +1,7 @@
 # Casos de Uso Atendente
 - Entrar
 - Criar Chamado
+- Adicionar Anexo
 - Atender Chamado
 - Retornar Chamados pendentes
 - Retornar Chamados em Atendimento
