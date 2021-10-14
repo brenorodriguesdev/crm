@@ -13,7 +13,7 @@ export class AlterarChamadoService implements AlterarChamadoUseCase {
     async alterar(alterarChamadoModel: AlterarChamadoModel): Promise<void | Error> {
         const chamado = await this.chamadoRepository.findById(alterarChamadoModel.idChamado)
         if (!chamado) {
-            return new Error('Esse chamado não existe!1')
+            return new Error('Esse chamado não existe!')
         }
         const canal = await this.canalRepository.findById(alterarChamadoModel.idCanal)
         if (!canal) {
